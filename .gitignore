@@ -1,0 +1,21 @@
+# === Java / Spring Boot ===
+/target/
+*.log
+*.class
+*.jar
+*.war
+
+# === Node / Angular ===
+/node_modules/
+dist/
+.angular/
+.env
+
+# === OS/IDE Files ===
+.DS_Store
+.idea/
+*.iml
+
+# === Misc ===
+*.bak
+*.tmp
