@@ -1,0 +1,46 @@
+<app-admin-menu></app-admin-menu>
+<ng-container>
+    <main class="container-fluid py-4">
+        <div class="edit-user-box">
+            <h2 class="text-center mb-2">Edit User</h2>
+            <p class="lead text-center mb-3">Update user account details</p>
+            <form [formGroup]="user" (ngSubmit)="user.valid && updateUser()">
+                <div class="mb-2">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username"  placeholder="Username" formControlName="username">
+                </div>
+                <div class="mb-2">
+                    <label for="password" class="form-label">Password </label>
+                    <input type="password" class="form-control" id="password" name="password"  placeholder="Enter new password" formControlName="password">
+                    <span *ngIf="user.get('password')?.invalid && user.get('password')?.touched"> invalid Password </span>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required formControlName="firstName">
+                        <span *ngIf="user.get('firstName')?.invalid && user.get('firstName')?.touched"> invalid First Name</span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required formControlName="lastName">
+                        <span *ngIf="user.get('lastName')?.invalid && user.get('lastName')?.touched"> invalid Last Name</span>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email"  placeholder="Enter email" required email formControlName="email">
+                    <span *ngIf="user.get('email')?.invalid && user.get('email')?.touched"> invalid Email</span>
+                </div>
+                <div class="mb-3">
+                    <label for="role" class="form-label">Role</label>
+                    <select class="form-control" id="role" name="role"  required formControlName="role">
+                        <option value="" disabled>Select a role</option>
+                        <option value="admin">Admin</option>
+                        <option value="faculty">Faculty</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" [disabled]="user.invalid">Update User</button>
+            </form>
+        </div>
+    </main>
+</ng-container>

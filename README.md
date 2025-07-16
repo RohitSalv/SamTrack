@@ -1,16 +1,16 @@
 # 📊 SamTrack – Student Attendance Management System
 
-**SamTrack** is a full-stack web application designed to manage and monitor student attendance effectively. It was developed as part of a training project at *The Kiran Academy*, using a modern tech stack and relational database design.
+**SamTrack** is a full-stack web application developed during my training at *The Kiran Academy*. It streamlines student attendance tracking with role-based access, subject mapping, and session-wise analytics.
 
 ---
 
 ## 🚀 Key Features
 
-- 👤 Role-based authentication (Admin, Faculty)
-- 🧑‍🎓 Student creation and attendance tracking
-- 📚 Subject-wise attendance records
-- 🏫 Institute (Customer) level segmentation
-- 📈 Dashboards for managing users, students, and sessions
+- 🔐 Role-based Login (Admin, Faculty)
+- 🧑‍🎓 Student Management with Attendance
+- 📚 Subject-wise Session Logging
+- 🏫 Customer (Institution) Level Management
+- 📊 Dashboard View for Attendance Insights
 
 ---
 
@@ -21,24 +21,24 @@
 | Frontend   | Angular 17+, TypeScript, HTML/CSS |
 | Backend    | Spring Boot (Java 17), REST APIs |
 | Database   | MySQL                            |
-| Tools      | Maven, Postman, Git              |
+| Tools      | Git, Maven, Postman              |
 
 ---
 
-## 🗂️ Project Structure
+## 📁 Project Structure
 
 SamTrack/
-├── backend-springboot/ # Java Spring Boot APIs
-├── frontend-angular/ # Angular frontend app
-├── database/ # schema.sql + ER diagram
+├── frontend-angular/ # Angular SPA
+├── backend-springboot/ # Spring Boot backend
+├── database/ # schema.sql and ER diagram
 │ └── er-diagram.png
 ├── docs/
-│ └── screenshots/ # UI screenshots
-│ ├── add-user.png
-│ ├── admin-dashboard.png
-│ ├── all-subject.png
+│ └── screenshots/
+│ ├── sign-in.png
 │ ├── home-page.png
-│ └── sign-in.png
+│ ├── admin-dashboard.png
+│ ├── add-user.png
+│ └── all-subject.png
 ├── .gitignore
 └── README.md
 
@@ -50,21 +50,19 @@ Edit
 
 ## 🧩 ER Diagram
 
-📌 Database schema used in the project:
-
 ![ER Diagram](database/er-diagram.png)
 
 ---
 
-## 📸 Screenshots
+## 🖼️ UI Screenshots
 
-| Page | Screenshot |
+| View | Screenshot |
 |------|------------|
-| 🔐 Sign In | ![Sign In](docs/screenshots/sign-in.png) |
-| 🏠 Home Page | ![Home Page](docs/screenshots/home-page.png) |
-| 📋 Admin Dashboard | ![Admin Dashboard](docs/screenshots/admin-dashboard.png) |
-| ➕ Add User | ![Add User](docs/screenshots/add-user.png) |
-| 📚 All Subjects | ![All Subjects](docs/screenshots/all-subject.png) |
+| 🔐 Login | ![](docs/screenshots/sign-in.png) |
+| 🏠 Home | ![](docs/screenshots/home-page.png) |
+| 🧑‍💼 Admin Dashboard | ![](docs/screenshots/admin-dashboard.png) |
+| ➕ Add User | ![](docs/screenshots/add-user.png) |
+| 📚 Subject List | ![](docs/screenshots/all-subject.png) |
 
 ---
 
@@ -72,8 +70,8 @@ Edit
 
 ```sql
 CREATE DATABASE samtrack;
--- Then import schema.sql inside /database folder
-🧪 Getting Started
+-- Import schema.sql file from /database/
+🧪 Running the Application
 🔧 Prerequisites
 Java 17+
 
@@ -85,29 +83,29 @@ Angular CLI
 
 MySQL Server
 
-▶️ Run the Backend
+🖥 Backend (Spring Boot)
 bash
 Copy
 Edit
 cd backend-springboot
 ./mvnw spring-boot:run
-Update application.properties with your MySQL credentials.
+Update application.properties with your DB credentials.
 
-💻 Run the Frontend
+🌐 Frontend (Angular)
 bash
 Copy
 Edit
 cd frontend-angular
 npm install
 ng serve
-App will be available at: http://localhost:4200
+App will run at: http://localhost:4200
 
-👨‍🏫 Training Note
-This project was created as part of my training at The Kiran Academy to master full-stack development using Angular, Spring Boot, and MySQL.
+🧠 Note
+📍 Built as part of my hands-on training to master full-stack Java development. This project strengthened my practical skills in Spring Boot, Angular, and MySQL.
 
 🤝 Connect With Me
-🔗 LinkedIn: Rohit Salve
+🔗 LinkedIn : https://www.linkedin.com/in/rohit-salve-6054b324a/
 
-💻 GitHub: @RohitSalv
+💻 GitHub : https://github.com/RohitSalv
 
-📧 Email: salver814@gmail.com
+📧 salver814@gmail.com

@@ -1,0 +1,16 @@
+<app-admin-menu></app-admin-menu>
+<ng-container>
+    <main class="container-fluid py-4">
+        <div class="add-subject-box">
+            <h2 class="text-center mb-2">Add Subject</h2>
+            <p class="lead text-center mb-3">Create a new subject</p>
+            <form [formGroup]="subjectForm" (ngSubmit)="subjectForm.valid && addSubject()">
+                <div class="mb-2">
+                    <label for="name" class="form-label">Subject Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter subject name">
+                </div>
+                <button type="submit" class="btn btn-primary w-100" [disabled]="subjectForm.invalid">Add Subject</button>
+            </form>
+        </div>
+    </main>
+</ng-container>

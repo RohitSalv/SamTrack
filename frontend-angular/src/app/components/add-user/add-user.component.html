@@ -1,0 +1,47 @@
+<app-admin-menu></app-admin-menu>
+<ng-container>
+    <main class="container-fluid py-4">
+        <div class="add-user-box">
+            <h2 class="text-center mb-2">Add New User</h2>
+            <p class="lead text-center mb-3">Create a new user account for the attendance system.</p>
+            <form [formGroup]="user" (ngSubmit)="adduser()">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="firstName" placeholder="First name" required>
+                        <span *ngIf="user.get('firstName')?.invalid && user.get('firstName')?.touched"> invalid First Name</span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" formControlName="lastName" placeholder="Last name" required>
+                        <span *ngIf="user.get('lastName')?.invalid && user.get('lastName')?.touched"> invalid Last Name</span>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" formControlName="username" placeholder="Username" required>
+                        <span *ngIf="user.get('username')?.invalid && user.get('username')?.touched"> invalid User Name</span>
+                    </div>
+                    <div class="col-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" formControlName="password" placeholder="Password" required>
+                        <span *ngIf="user.get('password')?.invalid && user.get('password')?.touched"> invalid Password</span>
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" formControlName="email" placeholder="Email address" required email>
+                        <span *ngIf="user.get('email')?.invalid && user.get('email')?.touched"> invalid Email</span>
+                    </div>
+                    <div class="col-12">
+                        <label for="role" class="form-label">Role</label>
+                        <select class="form-control" id="role" name="role" formControlName="role" required>
+                            <option value="" disabled selected>Select a role</option>
+                            <option value="admin">Admin</option>
+                            <option value="faculty">Faculty</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="user.invalid" >Add User</button>
+            </form>
+        </div>
+    </main>
+</ng-container>
