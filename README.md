@@ -1,4 +1,4 @@
-# 📊 SamTrack – Student Attendance Management System
+# 📊 SamTrack
 
 **SamTrack** is a full-stack web application developed during my training at *The Kiran Academy*. It streamlines student attendance tracking with role-based access, subject mapping, and session-wise analytics.
 
@@ -27,24 +27,22 @@
 
 ## 📁 Project Structure
 
+```
 SamTrack/
-├── frontend-angular/ # Angular SPA
-├── backend-springboot/ # Spring Boot backend
-├── database/ # schema.sql and ER diagram
-│ └── er-diagram.png
+├── frontend-angular/         # Angular SPA
+├── backend-springboot/       # Spring Boot backend
+├── database/                 # schema.sql and ER diagram
+│   └── er-diagram.png
 ├── docs/
-│ └── screenshots/
-│ ├── sign-in.png
-│ ├── home-page.png
-│ ├── admin-dashboard.png
-│ ├── add-user.png
-│ └── all-subject.png
+│   └── screenshots/
+│       ├── sign-in.png
+│       ├── home-page.png
+│       ├── admin-dashboard.png
+│       ├── add-user.png
+│       └── all-subject.png
 ├── .gitignore
 └── README.md
-
-yaml
-Copy
-Edit
+```
 
 ---
 
@@ -71,41 +69,51 @@ Edit
 ```sql
 CREATE DATABASE samtrack;
 -- Import schema.sql file from /database/
-🧪 Running the Application
-🔧 Prerequisites
-Java 17+
+```
 
-Maven
+---
 
-Node.js 16+
+## 🧪 Running the Application
 
-Angular CLI
+### 🔧 Prerequisites
 
-MySQL Server
+- Java 17+
+- Maven
+- Node.js 16+
+- Angular CLI
+- MySQL Server
 
-🖥 Backend (Spring Boot)
-bash
-Copy
-Edit
+---
+
+### 🖥 Backend (Spring Boot)
+
+```bash
 cd backend-springboot
 ./mvnw spring-boot:run
-Update application.properties with your DB credentials.
+```
+> Make sure to update `application.properties` with your MySQL credentials.
 
-🌐 Frontend (Angular)
-bash
-Copy
-Edit
+---
+
+### 🌐 Frontend (Angular)
+
+```bash
 cd frontend-angular
 npm install
 ng serve
-App will run at: http://localhost:4200
+```
+> App will run at: `http://localhost:4200`
 
-🧠 Note
+---
+
+## 🧠 Note
+
 📍 Built as part of my hands-on training to master full-stack Java development. This project strengthened my practical skills in Spring Boot, Angular, and MySQL.
 
-🤝 Connect With Me
-🔗 LinkedIn : https://www.linkedin.com/in/rohit-salve-6054b324a/
+---
 
-💻 GitHub : https://github.com/RohitSalv
+## 🤝 Connect With Me
 
-📧 salver814@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/rohit-salve-6054b324a/)
+- 💻 [GitHub](https://github.com/RohitSalv)
+- 📧 salver814@gmail.com
